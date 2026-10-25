@@ -13,7 +13,7 @@ def get_data(
     response.raise_for_status()
     print(f"Запрос '{service_name}': завершен (статус {response.status_code}, "
           f"длина тела {len(response.text)} символов, "
-          f"размер тела {len(response.content)} байт)")
+          f"кодировка ответа {response.encoding})")
 
 
 def main() -> None:
